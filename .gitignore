@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime data (sensitive / local-only)
+.quant_agent/sessions/
+.quant_agent/traces/
+.quant_agent/memory.db
+data_cache/
+
+# Generated scripts (local runtime output)
+screening_scripts/
+
+# UV
+.uv-cache/
+uv.lock

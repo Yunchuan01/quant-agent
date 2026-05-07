@@ -1,0 +1,29 @@
+[project]
+name = "quant-agent"
+version = "0.1.0"
+description = "AI-powered data screening agent with LangGraph, MCP tools, and Harness framework"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain-openai>=0.3.0",
+    "langchain-mcp-adapters>=0.1.0",
+    "mcp>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "polars>=0.20.0",
+    "numpy>=1.26.0",
+    "tushare>=1.4.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+deep = [
+    "deepagents>=0.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src", "mcp_server", "utils", "infrastructure", "app"]
